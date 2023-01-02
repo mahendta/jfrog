@@ -1,0 +1,21 @@
+1) launch ec2-instance
+   ec2-linux
+   select instance type t2.meadium ----> in order to have bettercpu config
+2) security group-->inbound rule-->add rule--> all traffic -->save changes
+   so we can access it through public ip
+3) connect to instance through mobaxterm
+  sudo su -
+  wget https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/[RELEASE]/jfrog-artifactory-oss-[RELEASE]-linux.tar.gz?_gl=1*1li7shh*_ga*NDE5NTQ4Mzk4LjE2NTc3OTg1NTM.*_ga_SQ1NR9VTFJ*MTY1Nzg3NzAzNi40LjEuMTY1Nzg3NzA4NS4xMQ..
+
+  ls (we can see the .tar.gz file we have to untar that file)
+  tar -zxvf <file_name>
+  cd artifactory
+  cd app
+  cd bin
+  ./artifactoryctl
+
+4) now copy public ip of instyance in browser with 8082 port number
+   public ip:8082
+
+5)username ---> admin
+  password---->Admin@123#
